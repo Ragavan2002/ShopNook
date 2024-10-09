@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-logo.webp' %}">
+    <title>Your Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div class="cart-item">
+        <p>{{ order_item.product.name }}</p>
+        <p>Quantity: {{ order_item.quantity }}</p>
+        <p>Total Price: ${{ order_item.get_total_price }}</p>
+        <form method="POST" action="{% url 'checkout' %}">
+            {% csrf_token %}
+            <input type="hidden" name="order_item_id" value="{{ order_item.id }}">
+            <button type="submit">Download Bill</button>
+        </form>
+        <a href="{% url 'order_confirmation' %}"> order_confirmation</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+    <title>Product List</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-logo.webp' %}">
+
+    <style>
+       
+       header{
+        height: 130px;
+       }
+        
+        h1{
+            color: white;
+            
+        }
+        .logo{
+            margin-left: 40px;
+            float: left;
+            height: 90px;
+            width: 110px;
+            background-color: black;
+            margin-left: 120px;
+        }
+       
+        .user-info {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;      
+            padding: 10px;
+        }
+
+        .user-info img {
+            border-radius: 50%;
+            width: 40px;        
+            height: 40px;       
+            margin-right: 20px;         }
+
+        .user-info .username {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo">
+        <h1>Welcome to ShopNook</h1>
+        <div class="user-info">
+            <!-- Replace the src with your image path -->
+            <img src="{% static 'images/man.png' %}" alt="User Image">
+            <span class="username">{{ username }}</span>
+        </div>
+    </header>
+
+    <div class="product-list">
+        {% for product in products %}
+        <div class="product-item">
+            <a href="{% url 'product_detail' product.id %}">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <h2>{{ product.name }}</h2>
+                <p>${{ product.price }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

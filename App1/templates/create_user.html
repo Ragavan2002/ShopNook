@@ -1,0 +1,195 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-logo.webp' %}">
+    <title>ShopNook</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 0px;
+            height: 150px;
+            width: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .Sigin {
+            margin-top: 0px;
+            display: block;
+            margin: auto;
+
+            width: 20%;
+            border: 0.5px solid rgb(20, 20, 20);
+            padding: 10px;
+            border-radius: 10px;
+            height: 450px;
+
+        }
+
+        .Sigin input {
+            width: 80%;
+            height: 20px;
+            margin: 10px 20px 20px 20px;
+        }
+
+        .Sigin button {
+            width: 80%;
+            height: 30px;
+            margin: 10px 20px 20px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: rgba(250, 250, 8, 0.879);
+        }
+
+        .Sigin button:hover {
+            background-color: rgb(255, 239, 8);
+        }
+
+        .center {
+            margin: auto;
+            width: 20%;
+        }
+
+        .small {
+            font-size: 14px;
+            padding-left: 120px;
+        }
+
+        .large {
+            font-size: 15px;
+            margin-left: 30px;
+        }
+
+        .butt {
+            font-size: 14px;
+            width: 100px;
+            text-align: center;
+            padding: 0px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 20px;
+            background-color: white;
+            color: black;
+
+        }
+
+        .center a:hover {
+            background-color: rgb(222, 220, 220);
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            /* Light background color for the footer */
+            padding: 20px;
+            /* Padding around the footer */
+            text-align: center;
+            /* Center align the content */
+            border-top: 1px solid #eaeaea;
+            /* Light border at the top */
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+            /* Set a default font */
+        }
+
+        footer p {
+            color: #333;
+            /* Dark text color for the copyright text */
+            font-size: 14px;
+            /* Adjust font size */
+            margin: 10px 0;
+            /* Spacing around the text */
+        }
+
+        .social-media {
+            margin-top: 10px;
+            /* Space between the text and social icons */
+        }
+
+        .social-media a {
+            display: inline-block;
+            /* Display icons inline */
+            margin: 0 10px;
+            /* Space between the icons */
+            text-decoration: none;
+            /* Remove underline from anchor tags */
+        }
+
+        .social-media a img {
+            width: 30px;
+            /* Set the size of the icons */
+            height: 30px;
+            /* Ensures the icons are square */
+            transition: transform 0.3s ease;
+            /* Add a smooth hover effect */
+        }
+
+        .social-media a:hover img {
+            transform: scale(1.1);
+            /* Slightly enlarge the icon on hover */
+        }
+        .alr{
+            margin:auto;
+            width: 20%;
+            padding: 10px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="{% static 'images/logo.jpeg' %}" alt="logo">
+    <form method="post">
+        {% csrf_token %}
+        <div class="Sigin">
+            <h1>Create Account</h1>
+            <label>Your Name </label>
+            <input type="text" name="user_name" class="" required>
+            <label for="">Enter Email </label>
+            <input type="email" name="email" required>
+            <label>Enter Password</label>
+            <input type="password" name="password" required>
+            <label> Re-Enter Password</label>
+            <input type="password" name="confirm_password" required>
+            <button type="submit">Continue </button>
+        </div>
+    </form>
+    <p class="alr">Already have Account<a href="{% url 'index' %}">Signin</a> </p>
+
+
+
+    <footer>
+        <p>&copy; 2020 ShopNook</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/ShopNook" target="_blank">
+                <img src="{% static 'images/facebook.png' %}" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com/ShopNook" target="_blank">
+                <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/ShopNook" target="_blank">
+                <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
