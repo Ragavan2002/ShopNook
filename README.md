@@ -25,21 +25,33 @@ ShopNook is a modern e-commerce web application built with Django. It enables us
   
 ## Project Structure
 
+shopnook/
+├── shopnook/                 # Main Django project folder
+│   ├── __init__.py
+│   ├── settings.py           # Project settings
+│   ├── urls.py               # Project URLs
+│   └── wsgi.py               # WSGI configuration
+├── shop/                     # Core app for product and order management
+│   ├── migrations/           # Database migrations
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py             # Product and order models
+│   ├── views.py              # Views for the app
+│   ├── urls.py               # App-specific URLs
+│   ├── static/shop/          # Static files (CSS, JS)
+│   │   ├── style.css         # Basic CSS for styling
+│   ├── templates/shop/       # HTML templates
+│   │   ├── home.html         # Homepage
+│   │   ├── product_list.html # Product listing
+│   │   ├── product_detail.html # Product details
+│   │   ├── cart.html         # Cart view
+│   │   ├── order_confirmation.html # Order confirmation
+│   │   ├── bill.html         # PDF Bill template
+├── media/                    # Media folder for uploaded product images
+├── manage.py                 # Django management script
+└── README.md                 # Project documentation
 
-.
-├── shopnook/              # Main Django app folder
-│   ├── migrations/        # Database migrations
-│   ├── static/            # Static files (CSS, JS, images)
-│   ├── templates/         # HTML templates
-│   ├── admin.py           # Admin configuration
-│   ├── apps.py            # App configuration
-│   ├── models.py          # Data models for the project
-│   ├── urls.py            # URL routing for the app
-│   └── views.py           # Application logic and views
-├── media/                 # Uploaded product images
-├── requirements.txt       # Project dependencies
-├── manage.py              # Django management script
-└── README.md              # This file
 
 ## Getting Started
 
