@@ -1,33 +1,61 @@
-#ShopNook - E-commerce Website
-ShopNook is a simple e-commerce web application built using Django. This project allows users to browse products, add them to their cart, and generate a PDF bill for their orders. Admin users can manage products, including uploading images, setting prices, and managing stock.
+# ShopNook - E-commerce Website
 
-#Table of Contents
-Features
-Technologies
-Installation
-Usage
-Folder Structure
-License
-#Features
-User Authentication: Users can register, log in, and log out.
-Product Listing: Products are listed for users to browse.
-Product Details: Users can view detailed information about a product.
-Add to Cart: Users can add items to their cart and update quantities.
-Checkout: Users can generate a PDF invoice for their orders.
-Admin Management: Admin users can add, edit, and delete products.
+ShopNook is a modern e-commerce web application built with Django. It enables users to browse products, add them to their cart, and download PDF invoices for their orders. Admins can manage products, including setting prices and uploading images.
 
-#Technologies
-Python 3.x
-Django 4.x
-HTML5 / CSS3
-JavaScript
-SQLite (or any other Django-supported database)
-xhtml2pdf for PDF generation
+## Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Uploads and Static Files](#file-uploads-and-static-files)
+- [PDF Generation](#pdf-generation)
+- [Issues](#issues)
+- [Deployment](#deployment)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-#Installation
-To get a local copy of this project up and running, follow these simple steps:
+## Features
+- **User Authentication:** Registration, login, and logout functionality.
+- **Product Listings:** View available products and their details.
+- **Shopping Cart:** Add products to cart and review orders.
+- **Checkout & Billing:** Generate and download PDF bills of orders.
+- **Order & Product Management:** Admin can manage orders and products.
+  
+## Project Structure
 
-#Prerequisites
-Python 3.x
-pip (Python package installer)
-Git (for cloning the repository)
+```bash
+.
+├── shopnook/              # Main Django app folder
+│   ├── migrations/        # Database migrations
+│   ├── static/            # Static files (CSS, JS, images)
+│   ├── templates/         # HTML templates
+│   ├── admin.py           # Admin configuration
+│   ├── apps.py            # App configuration
+│   ├── models.py          # Data models for the project
+│   ├── urls.py            # URL routing for the app
+│   └── views.py           # Application logic and views
+├── media/                 # Uploaded product images
+├── requirements.txt       # Project dependencies
+├── manage.py              # Django management script
+└── README.md              # This file
+
+## Getting Started
+
+Follow these instructions to set up the project on your local machine.
+
+### Prerequisites
+
+- Python 3.x
+- Django 4.x
+- Pip package manager
+- Virtual environment (recommended)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/shopnook.git
+   cd shopnook
