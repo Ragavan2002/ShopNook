@@ -8,13 +8,7 @@ ShopNook is a modern e-commerce web application built with Django. It enables us
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
-- [File Uploads and Static Files](#file-uploads-and-static-files)
-- [PDF Generation](#pdf-generation)
-- [Issues](#issues)
-- [Deployment](#deployment)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+
 
 ## Features
 - **User Authentication:** Registration, login, and logout functionality.
