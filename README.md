@@ -24,7 +24,7 @@ ShopNook is a modern e-commerce web application built with Django. It enables us
 - **Order & Product Management:** Admin can manage orders and products.
   
 ## Project Structure
-
+```plaintext
 shopnook/
 ├── shopnook/                 # Main Django project folder
 │   ├── __init__.py
@@ -52,7 +52,7 @@ shopnook/
 ├── manage.py                 # Django management script
 └── README.md                 # Project documentation
 
-
+```
 ## Getting Started
 
 Follow these instructions to set up the project on your local machine.
