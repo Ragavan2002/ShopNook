@@ -59,32 +59,39 @@ Follow these instructions to set up the project on your local machine.
    ```bash
    git clone https://github.com/yourusername/shopnook.git
    cd shopnook
-2.Create a virtual environment and activate it:
+   ```
+2.**Create a virtual environment and activate it:**
 
-
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-3.Install the dependencies:
-pip install -r requirements.txt
-
-4Run migrations:
+  ```bash
+  python -m venv env
+  source env/bin/activate  # On Windows: env\Scripts\activate
+  ```
+3.**Install the dependencies:**
+  ```bash
+  pip install -r requirements.txt
+  ```
+**4.Run migrations:**
+```bash
 python manage.py migrate
+```
 
-5.Create a superuser (Admin):
+**5.Create a superuser (Admin):**
+```bash
 python manage.py createsuperuser
-
-6.Run the development server:
+```
+**6.Run the development server:**
+```bash
 python manage.py runserver
-Access the application:
+```
+**Access the application:**
 
 Visit http://127.0.0.1:8000/ in your browser.
-
-Project Details
-Models
+##Project Details
+###Models
 Product: Stores product details like name, description, price, and image.
 OrderItem: Stores individual product orders with quantity.
 Order: Tracks the items ordered and the total price.
-Views
+###Views
 User login and creation: Basic user authentication.
 Product List: Displays all products.
 Product Detail: Shows individual product details.
