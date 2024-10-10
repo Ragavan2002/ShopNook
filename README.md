@@ -25,7 +25,7 @@ ShopNook is a modern e-commerce web application built with Django. It enables us
   
 ## Project Structure
 
-```bash
+
 .
 ├── shopnook/              # Main Django app folder
 │   ├── migrations/        # Database migrations
@@ -59,3 +59,35 @@ Follow these instructions to set up the project on your local machine.
    ```bash
    git clone https://github.com/yourusername/shopnook.git
    cd shopnook
+2.Create a virtual environment and activate it:
+
+
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+3.Install the dependencies:
+pip install -r requirements.txt
+
+4Run migrations:
+python manage.py migrate
+
+5.Create a superuser (Admin):
+python manage.py createsuperuser
+
+6.Run the development server:
+python manage.py runserver
+Access the application:
+
+Visit http://127.0.0.1:8000/ in your browser.
+
+Project Details
+Models
+Product: Stores product details like name, description, price, and image.
+OrderItem: Stores individual product orders with quantity.
+Order: Tracks the items ordered and the total price.
+Views
+User login and creation: Basic user authentication.
+Product List: Displays all products.
+Product Detail: Shows individual product details.
+Cart: Shows the selected product in the cart.
+Checkout: Generates a PDF bill for the order.
+Order Confirmation: Displays after successful checkout.
