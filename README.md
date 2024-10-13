@@ -104,3 +104,6 @@ Product Detail: Shows individual product details.
 Cart: Shows the selected product in the cart.
 Checkout: Generates a PDF bill for the order.
 Order Confirmation: Displays after successful checkout.
+
+
+* Watch this video for reference *
