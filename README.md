@@ -107,3 +107,6 @@ Order Confirmation: Displays after successful checkout.
 
 
 * Watch this video for reference *
+
+**This project I have hosted in Pythonanywhere**
+If u want to try:  https://ragavan07.pythonanywhere.com/
